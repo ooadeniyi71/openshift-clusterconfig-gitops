@@ -78,9 +78,9 @@ success() {
 #######################################
 check_dependencies() {
     local deps=("helm" "oc")
-    
+
     debug "Checking required dependencies: ${deps[*]}"
-    
+
     for dep in "${deps[@]}"; do
         if command -v "$dep" >/dev/null 2>&1; then
             debug "Found $dep at $(command -v "$dep")"
@@ -105,13 +105,13 @@ check_dependencies() {
 #######################################
 add_helm_repo() {
     info "Adding Helm Repo ${HELM_CHARTS}"
-    
+
     debug_cmd "$HELM_BIN" repo add --force-update "$HELM_REPO_NAME" "$HELM_CHARTS"
     "$HELM_BIN" repo add --force-update "$HELM_REPO_NAME" "$HELM_CHARTS"
-    
+
     debug_cmd "$HELM_BIN" repo update
     "$HELM_BIN" repo update >/dev/null
-    
+
     debug "Helm repositories configured:"
     if [[ "$DEBUG" == "true" ]]; then
         "$HELM_BIN" repo list
@@ -125,10 +125,10 @@ add_helm_repo() {
 #######################################
 check_op_status() {
     local get_status
-    
+
     debug "Checking subscription status in namespace: $GITOPS_OPERATOR_NAMESPACE"
     debug_cmd oc get subscription.operators.coreos.com/openshift-gitops-operator -n "$GITOPS_OPERATOR_NAMESPACE" -o jsonpath='{.status.conditions[0].reason}'
-    
+
     get_status=$(oc get subscription.operators.coreos.com/openshift-gitops-operator \
         -n "$GITOPS_OPERATOR_NAMESPACE" \
         -o jsonpath='{.status.conditions[0].reason}' 2>/dev/null) || {
@@ -155,7 +155,7 @@ wait_for_resource() {
     [[ -n "$namespace" ]] && ns_flag=(-n "$namespace")
 
     debug "Waiting for resource: $resource ${namespace:+in namespace: $namespace}"
-    
+
     info "Waiting for ${resource}"
     until oc get "$resource" "${ns_flag[@]}" >/dev/null 2>&1; do
         ((attempt++))
@@ -163,7 +163,7 @@ wait_for_resource() {
         printf "."
         sleep "$RECHECK_TIMER"
     done
-    
+
     debug "Resource $resource is now available (after $attempt attempts)"
     success "${resource} is ready"
 }
@@ -175,13 +175,13 @@ wait_for_argocd_pods() {
     local -a deployments=(openshift-gitops-server)
 
     debug "Deployments to wait for: ${deployments[*]}"
-    
+
     for deployment in "${deployments[@]}"; do
         info "Waiting for deployment ${deployment}"
         debug_cmd oc rollout status deployment "$deployment" -n "$GITOPS_NAMESPACE" --timeout=300s
         oc rollout status deployment "$deployment" -n "$GITOPS_NAMESPACE" --timeout=300s
     done
-    
+
     if [[ "$DEBUG" == "true" ]]; then
         debug "Current pods in $GITOPS_NAMESPACE:"
         oc get pods -n "$GITOPS_NAMESPACE" -o wide
@@ -194,7 +194,7 @@ wait_for_argocd_pods() {
 configure_argocd() {
     local helm_cmd
     local patch_url="https://raw.githubusercontent.com/tjungbauer/helm-charts/main/charts/openshift-gitops/PATCH_openshift-gitops-crb.yaml"
-    
+
     info "Configuring ArgoCD CRD"
 
     helm_cmd="$HELM_BIN template \
@@ -203,7 +203,7 @@ configure_argocd() {
         --verify \
         -f values-openshift-gitops.yaml \
         ${HELM_REPO_NAME}/openshift-gitops"
-    
+
     debug_cmd "$helm_cmd | oc replace -f -"
     "$HELM_BIN" template \
         --set 'gitopsinstances.openshift_gitops.enabled=true' \
@@ -219,12 +219,12 @@ configure_argocd() {
     info "Restarting ArgoCD pods"
     debug "Deleting all pods in namespace: $GITOPS_NAMESPACE"
     debug_cmd oc delete pods --all -n "$GITOPS_NAMESPACE"
-    
+
     if [[ "$DEBUG" == "true" ]]; then
         debug "Pods before deletion:"
         oc get pods -n "$GITOPS_NAMESPACE" --no-headers 2>/dev/null || debug "No pods found"
     fi
-    
+
     oc delete pods --all -n "$GITOPS_NAMESPACE" >/dev/null 2>&1
 
     debug "Sleeping ${RECHECK_TIMER}s before checking pod status"
@@ -239,24 +239,24 @@ configure_argocd() {
 #######################################
 deploy_app_of_apps() {
     local helm_cmd
-    
+
     info "Deploying App of Apps"
-    
+
     debug "Switching to project: $GITOPS_NAMESPACE"
     debug_cmd oc project "$GITOPS_NAMESPACE"
     oc project "$GITOPS_NAMESPACE"
-    
+
     helm_cmd="$HELM_BIN upgrade --install --dependency-update \
         --values ./base/init_app_of_apps/values.yaml \
         --set namespace=${GITOPS_NAMESPACE} \
         app-of-apps ./base/init_app_of_apps"
-    
+
     debug_cmd "$helm_cmd"
     "$HELM_BIN" upgrade --install --dependency-update \
         --values ./base/init_app_of_apps/values.yaml \
         --set "namespace=${GITOPS_NAMESPACE}" \
         app-of-apps ./base/init_app_of_apps
-        
+
     if [[ "$DEBUG" == "true" ]]; then
         debug "Helm releases in namespace $GITOPS_NAMESPACE:"
         "$HELM_BIN" list -n "$GITOPS_NAMESPACE"
@@ -275,14 +275,14 @@ wait_with_progress() {
     local i
 
     debug "Starting wait: ${seconds}s (${message})"
-    
+
     printf "\n%s for %d seconds: " "$message" "$seconds"
     for ((i = 0; i < seconds; i++)); do
         printf "."
         sleep 1
     done
     printf " done\n"
-    
+
     debug "Wait completed"
 }
 
@@ -332,7 +332,7 @@ deploy() {
             --force \
             -f values-openshift-gitops.yaml \
             ${HELM_REPO_NAME}/openshift-gitops"
-        
+
         debug_cmd "$helm_cmd | oc create -f -"
         "$HELM_BIN" template \
             --set 'helper-operator.enabled=true' \
@@ -365,7 +365,7 @@ main() {
     if [[ "$DEBUG" == "true" ]]; then
         printf "%b[DEBUG] Debug mode enabled%b\n" "${YELLOW}" "${NC}"
     fi
-    
+
     print_config
     check_dependencies
     deploy
