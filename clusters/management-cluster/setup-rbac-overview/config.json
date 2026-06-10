@@ -1,0 +1,4 @@
+{
+  "namespace": "rbac-overview",
+  "environment": "in-cluster"
+}
