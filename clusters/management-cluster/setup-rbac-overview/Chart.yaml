@@ -5,7 +5,7 @@ home: https://github.com/tjungbauer/openshift-clusterconfig-gitops/tree/main/clu
 version: 1.0.0
 dependencies:
   - name: rbac-overview
-    version: 1.0.1
+    version: 1.0.5
     repository: https://tjungbauer.github.io/openshift-console-rbac-overview
 maintainers:
   - name: tjungbauer
