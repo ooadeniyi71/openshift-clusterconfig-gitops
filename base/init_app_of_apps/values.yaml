@@ -16,8 +16,8 @@ helper-argocd:
 
       multiple_sources:
           # Define repository of the values-file
-        - repoUrl: https://github.com/tjungbauer/openshift-clusterconfig-gitops
-          targetRevision: main
+        - repoUrl: https://github.com/ooadeniyi71/openshift-clusterconfig-gitops
+          targetRevision: agents/openshift-deployment-setup
           ref: values
           # Define Helm Chart repository
         - repoUrl: "https://charts.stderr.at/"

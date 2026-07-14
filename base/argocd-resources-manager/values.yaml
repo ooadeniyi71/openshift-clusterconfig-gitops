@@ -9,8 +9,8 @@ mgmt-cluster-name: &mgmtclustername in-cluster
 production-cluster: &prodcluster https://api.ocp.aws.ispworld.at:6443
 production-cluster-name: &prodclustername prod
 
-repourl: &repourl 'https://github.com/tjungbauer/openshift-clusterconfig-gitops'
-repobranch: &branch main
+repourl: &repourl 'https://github.com/ooadeniyi71/openshift-clusterconfig-gitops'
+repobranch: &branch agents/openshift-deployment-setup
 
 # the anchor *rev must be set to a default value, in case it is not set for the cluster
 dummy_rev: &rev 1.0.0
