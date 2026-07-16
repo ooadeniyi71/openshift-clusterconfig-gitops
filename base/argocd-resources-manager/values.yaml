@@ -9,7 +9,7 @@ mgmt-cluster-name: &mgmtclustername in-cluster
 production-cluster: &prodcluster https://api.ocp.aws.ispworld.at:6443
 production-cluster-name: &prodclustername prod
 
-repourl: &repourl 'https://github.com/tjungbauer/openshift-clusterconfig-gitops'
+repourl: &repourl 'https://github.com/ooadeniyi71/openshift-clusterconfig-gitops.git'
 repobranch: &branch main
 
 # the anchor *rev must be set to a default value, in case it is not set for the cluster
@@ -277,7 +277,7 @@ applicationsets:
     targetrevision: 1.0.16
 
     # List of clusters
-    # "clustername" (string): Is the name of the cluster a defined in Argo CD
+    # "clustername" (string): Is the name of a cluster a defined in Argo CD
     # "clusterurl" (string): Is the URL of the cluster API
     # "chart_version" (string, optional): Defines which chart version shall be deployed on each cluster.
     generatorlist:
@@ -351,7 +351,7 @@ applicationsets:
         clusterurl: *mgmtcluster
     syncPolicy:
       autosync_enabled: false
-    path: /
+    path: .
     repourl: "https://github.com/tjungbauer/RHACS-Demo-Application"
     targetrevision: "main"
 
