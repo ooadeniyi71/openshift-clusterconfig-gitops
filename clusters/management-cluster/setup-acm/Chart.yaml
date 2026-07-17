@@ -17,7 +17,7 @@ dependencies:
     repository: https://charts.stderr.at/
     condition: helper-status-checker.enabled
 maintainers:
-  - name: tjungbauer
+  - name: ooadeniyi71
     email: dev@stdin.at
     url: https://blog.stderr.at/
 keywords:

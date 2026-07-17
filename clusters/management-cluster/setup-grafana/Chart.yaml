@@ -1,7 +1,7 @@
 apiVersion: v2
 name: setup-grafana
 description: Deploy the Grafana Operator
-home: https://github.com/tjungbauer/openshift-clusterconfig-gitops/tree/main/clusters/management-cluster/setup-grafana
+home: https://github.com/ooadeniyi71/openshift-clusterconfig-gitops/tree/main/clusters/management-cluster/setup-grafana
 version: 1.0.0
 dependencies:
   - name: tpl
@@ -15,13 +15,13 @@ dependencies:
     repository: https://charts.stderr.at/
     condition: helper-status-checker.enabled
 maintainers:
-  - name: tjungbauer
+  - name: ooadeniyi71
     email: tjungbau@redhat.com
     url: https://blog.stderr.at/
 sources:
-  - https://github.com/tjungbauer/helm-charts
+  - https://github.com/ooadeniyi71/helm-charts
   - https://charts.stderr.at/
-  - https://github.com/tjungbauer/openshift-clusterconfig-gitops
+  - https://github.com/ooadeniyi71/openshift-clusterconfig-gitops
 keywords:
   - grafana
   - observability

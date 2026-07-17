@@ -13,21 +13,21 @@ This chart has the following dependencies:
 | Repository | Name | Version |
 |------------|------|---------|
 
-It is best used with a full GitOps approach such as Argo CD does. For example, https://github.com/tjungbauer/openshift-clusterconfig-gitops (see folder cluster/management-cluster/ingresscontroller)
+It is best used with a full GitOps approach such as Argo CD does. For example, https://github.com/ooadeniyi71/openshift-clusterconfig-gitops (see folder cluster/management-cluster/ingresscontroller)
 
 ## Maintainers
 
 | Name | Email | Url |
 | ---- | ------ | --- |
-| tjungbauer | <tjungbau@redhat.com> | <https://blog.stderr.at/> |
+| ooadeniyi71 | <tjungbau@redhat.com> | <https://blog.stderr.at/> |
 
 ## Sources
 Source:
-* <https://github.com/tjungbauer/helm-charts>
+* <https://github.com/ooadeniyi71/helm-charts>
 * <https://charts.stderr.at/>
-* <https://github.com/tjungbauer/openshift-clusterconfig-gitops>
+* <https://github.com/ooadeniyi71/openshift-clusterconfig-gitops>
 
-Source code: https://github.com/tjungbauer/helm-charts/tree/main/charts/generic-cluster-config
+Source code: https://github.com/ooadeniyi71/helm-charts/tree/main/charts/generic-cluster-config
 
 ## Values
 
@@ -98,7 +98,7 @@ ingresscontrollers:
 To install the chart with the release name `my-release`:
 
 ```console
-helm install my-release tjungbauer/<chart-name>>
+helm install my-release ooadeniyi71/<chart-name>>
 ```
 
 The command deploys the chart on the Kubernetes cluster in the default configuration.

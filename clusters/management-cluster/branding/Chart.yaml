@@ -7,13 +7,13 @@ dependencies:
     version: ~1.0.10
     repository: https://charts.stderr.at/
 maintainers:
-  - name: tjungbauer
+  - name: ooadeniyi71
     email: tjungbau@redhat.com
     url: https://blog.stderr.at/
 sources:
-  - https://github.com/tjungbauer/helm-charts
+  - https://github.com/ooadeniyi71/helm-charts
   - https://charts.stderr.at/
-  - https://github.com/tjungbauer/openshift-clusterconfig-gitops
+  - https://github.com/ooadeniyi71/openshift-clusterconfig-gitops
 keywords:
   - secure-supply-chain
   - security

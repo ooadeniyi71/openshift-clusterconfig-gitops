@@ -15,14 +15,14 @@
 #
 # Environment variables:
 #   GITHUB_TOKEN - Optional: GitHub token for higher API rate limits
-#   GITHUB_REPO  - Optional: Override repo (default: tjungbauer/openshift-clusterconfig-gitops)
+#   GITHUB_REPO  - Optional: Override repo (default: ooadeniyi71/openshift-clusterconfig-gitops)
 #   GITHUB_BRANCH - Optional: Override branch (default: main)
 #
 
 set -e
 
 # Configuration
-GITHUB_REPO="${GITHUB_REPO:-tjungbauer/openshift-clusterconfig-gitops}"
+GITHUB_REPO="${GITHUB_REPO:-ooadeniyi71/openshift-clusterconfig-gitops}"
 GITHUB_BRANCH="${GITHUB_BRANCH:-main}"
 GITHUB_API="https://api.github.com"
 GITHUB_RAW="https://raw.githubusercontent.com"

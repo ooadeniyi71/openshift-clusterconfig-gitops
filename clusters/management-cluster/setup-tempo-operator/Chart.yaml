@@ -26,14 +26,14 @@ dependencies:
     repository: https://charts.stderr.at/
     condition: tempo-tracing.enabled
 maintainers:
-  - name: tjungbauer
+  - name: ooadeniyi71
     email: tjungbau@redhat.com
     url: https://blog.stderr.at/
 sources:
-  - https://github.com/tjungbauer/helm-charts
+  - https://github.com/ooadeniyi71/helm-charts
   - https://charts.stderr.at/
-  - https://github.com/tjungbauer/openshift-clusterconfig-gitops
-home: https://github.com/tjungbauer/openshift-clusterconfig-gitops/tree/main/clusters/management-cluster/setup-tempo-operator
+  - https://github.com/ooadeniyi71/openshift-clusterconfig-gitops
+home: https://github.com/ooadeniyi71/openshift-clusterconfig-gitops/tree/main/clusters/management-cluster/setup-tempo-operator
 keywords:
   - tracing
   - tempo

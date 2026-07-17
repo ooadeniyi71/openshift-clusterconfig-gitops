@@ -250,7 +250,7 @@ fi
 # Main JSON generation
 echo "{"
 echo "  \"lastUpdated\": \"$(date +%Y-%m-%d)\","
-echo "  \"repository\": \"https://github.com/tjungbauer/openshift-clusterconfig-gitops\","
+echo "  \"repository\": \"https://github.com/ooadeniyi71/openshift-clusterconfig-gitops\","
 echo "  \"categories\": {"
 echo "    \"security\": { \"name\": \"Security & Compliance\", \"icon\": \"shield-alt\", \"color\": \"#dc3545\" },"
 echo "    \"observability\": { \"name\": \"Observability & Monitoring\", \"icon\": \"chart-line\", \"color\": \"#17a2b8\" },"

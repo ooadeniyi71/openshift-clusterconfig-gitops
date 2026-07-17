@@ -14,7 +14,7 @@ readonly DEBUG=${DEBUG:-false}
 readonly TIMER=${TIMER:-45}
 readonly RECHECK_TIMER=${RECHECK_TIMER:-10}
 readonly HELM_CHARTS="https://charts.stderr.at/"
-readonly HELM_REPO_NAME="tjungbauer"
+readonly HELM_REPO_NAME="ooadeniyi71"
 readonly GITOPS_NAMESPACE="openshift-gitops"
 readonly GITOPS_OPERATOR_NAMESPACE="openshift-gitops-operator"
 
@@ -193,7 +193,7 @@ wait_for_argocd_pods() {
 #######################################
 configure_argocd() {
     local helm_cmd
-    local patch_url="https://raw.githubusercontent.com/tjungbauer/helm-charts/main/charts/openshift-gitops/PATCH_openshift-gitops-crb.yaml"
+    local patch_url="https://raw.githubusercontent.com/ooadeniyi71/helm-charts/main/charts/openshift-gitops/PATCH_openshift-gitops-crb.yaml"
 
     info "Configuring ArgoCD CRD"
 

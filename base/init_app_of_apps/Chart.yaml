@@ -3,7 +3,7 @@ name: init_app_of_apps
 description: Installs a single application into Argo CD, which automatically syncs all other applications and ApplicationSets.
 version: 2.0.0
 maintainers:
-  - name: tjungbauer
+  - name: ooadeniyi71
     email: tjungbau@redhat.com
     url: https://blog.stderr.at/
 dependencies:
@@ -14,8 +14,8 @@ dependencies:
     version: ~2.0.41
     repository: https://charts.stderr.at/
 sources:
-  - https://github.com/tjungbauer/openshift-clusterconfig-gitops
-home: https://github.com/tjungbauer/openshift-clusterconfig-gitops/tree/main/base/init_app_of_apps
+  - https://github.com/ooadeniyi71/openshift-clusterconfig-gitops
+home: https://github.com/ooadeniyi71/openshift-clusterconfig-gitops/tree/main/base/init_app_of_apps
 keywords:
   - helper
   - subchart

@@ -3,14 +3,14 @@
 # clusterconfig-etcd-encryption
 
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-[![Linting](https://github.com/tjungbauer/openshift-clusterconfig-gitops/actions/workflows/linting.yml/badge.svg)](https://github.com/tjungbauer/openshift-clusterconfig-gitops/actions/workflows/linting.yml)
-[![Release Charts](https://github.com/tjungbauer/helm-charts/actions/workflows/release.yml/badge.svg)](https://github.com/tjungbauer/helm-charts/actions/workflows/release.yml)
+[![Linting](https://github.com/ooadeniyi71/openshift-clusterconfig-gitops/actions/workflows/linting.yml/badge.svg)](https://github.com/ooadeniyi71/openshift-clusterconfig-gitops/actions/workflows/linting.yml)
+[![Release Charts](https://github.com/ooadeniyi71/helm-charts/actions/workflows/release.yml/badge.svg)](https://github.com/ooadeniyi71/helm-charts/actions/workflows/release.yml)
 
 ![Version: 1.0.0](https://img.shields.io/badge/Version-1.0.0-informational?style=flat-square)
 
 ## Description
 
-This chart uses <https://github.com/tjungbauer/helm-charts> as a source. Please verify the README there as well.
+This chart uses <https://github.com/ooadeniyi71/helm-charts> as a source. Please verify the README there as well.
 
 Create a CronJob that performs ETCD Backup and stores the backup to a PV.
 
@@ -37,19 +37,19 @@ The CronJob will perform the following:
 
 | Name | Email | Url |
 | ---- | ------ | --- |
-| tjungbauer | <tjungbau@redhat.com> | <https://blog.stderr.at/> |
+| ooadeniyi71 | <tjungbau@redhat.com> | <https://blog.stderr.at/> |
 
 ## Sources
 Source:
-* <https://github.com/tjungbauer/helm-charts>
+* <https://github.com/ooadeniyi71/helm-charts>
 * <https://charts.stderr.at/>
-* <https://github.com/tjungbauer/openshift-clusterconfig-gitops>
+* <https://github.com/ooadeniyi71/openshift-clusterconfig-gitops>
 
-Source code: https://github.com/tjungbauer/helm-charts/tree/main/charts/etcd-backup
+Source code: https://github.com/ooadeniyi71/helm-charts/tree/main/charts/etcd-backup
 
 ## Example values
 
-**NOTE**: Please verify the full Readme at: https://github.com/tjungbauer/helm-charts/charts/etcd-backup
+**NOTE**: Please verify the full Readme at: https://github.com/ooadeniyi71/helm-charts/charts/etcd-backup
 
 ```yaml
 ---
@@ -89,7 +89,7 @@ etcd-backup:
 To install the chart with the release name `my-release`:
 
 ```console
-helm install my-release tjungbauer/<chart-name>>
+helm install my-release ooadeniyi71/<chart-name>>
 ```
 
 The command deploys the chart on the Kubernetes cluster in the default configuration.

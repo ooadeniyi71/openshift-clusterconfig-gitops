@@ -14,13 +14,13 @@ dependencies:
     version: ~0.27.0
     repository: https://openbao.github.io/openbao-helm
 maintainers:
-  - name: tjungbauer
+  - name: ooadeniyi71
     email: tjungbau@redhat.com
     url: https://blog.stderr.at/
 sources:
-  - https://github.com/tjungbauer/helm-charts
+  - https://github.com/ooadeniyi71/helm-charts
   - https://charts.stderr.at/
-  - https://github.com/tjungbauer/openshift-clusterconfig-gitops
+  - https://github.com/ooadeniyi71/openshift-clusterconfig-gitops
 keywords:
   - security
   - secrets

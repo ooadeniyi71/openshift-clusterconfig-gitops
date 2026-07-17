@@ -30,4 +30,4 @@ dependencies:
     repository: https://charts.stderr.at/
     condition: helper-lokistack.enabled
 maintainers:
-  - name: tjungbauer
+  - name: ooadeniyi71

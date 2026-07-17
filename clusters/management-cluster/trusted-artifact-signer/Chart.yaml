@@ -14,4 +14,4 @@ dependencies:
     repository: https://charts.stderr.at/
     condition: helper-status-checker.enabled
 maintainers:
-  - name: tjungbauer
+  - name: ooadeniyi71

@@ -8,7 +8,7 @@ Installs and configures OpenShift Network Observability.
 
 | Name | Email | Url |
 | ---- | ------ | --- |
-| tjungbauer |  |  |
+| ooadeniyi71 |  |  |
 
 ## Requirements
 

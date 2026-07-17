@@ -3,7 +3,7 @@
 # GitOps instance for Application workload
 
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-[![Linting](https://github.com/tjungbauer/openshift-clusterconfig-gitops/actions/workflows/linting.yml/badge.svg)](https://github.com/tjungbauer/openshift-clusterconfig-gitops/actions/workflows/linting.yml)
+[![Linting](https://github.com/ooadeniyi71/openshift-clusterconfig-gitops/actions/workflows/linting.yml/badge.svg)](https://github.com/ooadeniyi71/openshift-clusterconfig-gitops/actions/workflows/linting.yml)
  
 
   ## Description
@@ -23,21 +23,21 @@ This chart has the following dependencies:
 
 | Name | Email | Url |
 | ---- | ------ | --- |
-| tjungbauer | <tjungbau@redhat.com> | <https://blog.stderr.at/> |
+| ooadeniyi71 | <tjungbau@redhat.com> | <https://blog.stderr.at/> |
 
 ## Sources
 Source:
-* <https://github.com/tjungbauer/helm-charts>
+* <https://github.com/ooadeniyi71/helm-charts>
 * <https://charts.stderr.at/>
-* <https://github.com/tjungbauer/openshift-clusterconfig-gitops>
+* <https://github.com/ooadeniyi71/openshift-clusterconfig-gitops>
 
-Source code: https://github.com/tjungbauer/helm-charts/tree/main/charts/openshift-gitops
+Source code: https://github.com/ooadeniyi71/helm-charts/tree/main/charts/openshift-gitops
 
 ## Parameters
 
 Verify the sub-charts for a documentation of the possible settings:
 
-* [openshift-gitops](https://github.com/tjungbauer/helm-charts/tree/main/charts/openshift-gitops)
+* [openshift-gitops](https://github.com/ooadeniyi71/helm-charts/tree/main/charts/openshift-gitops)
 
 ## Example
 

@@ -15,13 +15,13 @@ dependencies:
     repository: https://charts.stderr.at/
     condition: cert-manager.enabled
 maintainers:
-  - name: tjungbauer
+  - name: ooadeniyi71
     email: tjungbau@redhat.com
     url: https://blog.stderr.at/
 sources:
-  - https://github.com/tjungbauer/openshift-clusterconfig-gitops
-  - https://github.com/tjungbauer/helm-charts
+  - https://github.com/ooadeniyi71/openshift-clusterconfig-gitops
+  - https://github.com/ooadeniyi71/helm-charts
   - https://charts.stderr.at/
-home: https://github.com/tjungbauer/openshift-clusterconfig-gitops/tree/main/clusters/all/etcd-encryption
+home: https://github.com/ooadeniyi71/openshift-clusterconfig-gitops/tree/main/clusters/all/etcd-encryption
 keywords:
   - security
