@@ -352,7 +352,7 @@ applicationsets:
     syncPolicy:
       autosync_enabled: false
     path: .
-    repourl: "https://github.com/ooadeniyi71/RHACS-Demo-Application"
+    repourl: "https://github.com/tjungbauer/RHACS-Demo-Application"
     targetrevision: "main"
 
   # Install Pipeline Demo
@@ -389,7 +389,7 @@ applicationsets:
         - name: CreateNamespace
           value: true
     path: k8s/
-    repourl: 'https://github.com/ooadeniyi71/mockbin'
+    repourl: 'https://github.com/tjungbauer/mockbin'
     targetrevision: "main"
     namespace: mockbin-1
 
@@ -410,7 +410,7 @@ applicationsets:
         - name: CreateNamespace
           value: true
     path: k8s/
-    repourl: 'https://github.com/ooadeniyi71/mockbin'
+    repourl: 'https://github.com/tjungbauer/mockbin'
     targetrevision: "main"
     namespace: team-d
 

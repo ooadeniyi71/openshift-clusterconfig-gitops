@@ -6,13 +6,13 @@ version: 1.0.0
 dependencies:
   - name: rbac-overview
     version: 1.0.5
-    repository: https://ooadeniyi71.github.io/openshift-console-rbac-overview
+    repository: https://tjungbauer.github.io/openshift-console-rbac-overview
 maintainers:
   - name: ooadeniyi71
     email: tjungbau@redhat.com
     url: https://blog.stderr.at/
 sources:
-  - https://github.com/ooadeniyi71/openshift-console-rbac-overview
+  - https://github.com/tjungbauer/openshift-console-rbac-overview
   - https://github.com/ooadeniyi71/openshift-clusterconfig-gitops
 keywords:
   - openshift
